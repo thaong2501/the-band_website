@@ -160,11 +160,39 @@ html{
 #nav .nav-arrow-down {
     font-size: 12px;
 }
-#header .mobile-menu-btn,
+
+
+#header .mobile-menu-btn {
+    float: right;
+    padding: 0 21px;
+}
+
+#header .search-bar {
+    float: right;
+    height: 46px;
+}
+
 #header .search-btn {
     float: right;
     padding: 0 21px;
 }
+
+#header .search-txt{
+    float: left;
+    line-height: 46px;
+    
+}
+
+#header .search-txt input {
+    width: 250px;
+    height: 32px;
+    background-color: #000;
+    padding: 5px;
+    color: #fff;
+    outline: none;
+    border: 1px solid #fff;
+}
+
 
 #header .search-btn:hover {
     cursor: pointer;
@@ -200,7 +228,8 @@ html{
     background: url('../img/slider1.jpg') top center / cover  no-repeat;
 }
 
-#slider .text-content {
+
+#slider .slide-content {
     position:absolute;
     bottom: 47px;
     color: #fff;
@@ -209,12 +238,12 @@ html{
     text-shadow: 0 0 1px #000;
 }
 
-#slider .text-heading {
+#slider .slide-heading {
     font-weight: 300;
     font-size: 24px;
 }
 
-#slider .text-description {
+#slider .slide-description {
     font-size: 15px;
     margin-top: 25px;
 }
@@ -343,6 +372,95 @@ html{
 .place-desc {
     margin-top: 15px;
     line-height: 1.4;
+}
+
+/* Buy ticket*/
+.container-buy-ticket {
+    z-index: 3;
+    display: none;
+    padding-top: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.buy-ticket {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.buy-ticket-header {
+    position: relative;
+    background-color: #009688;
+    padding: 32px 16px;
+}
+
+.buy-ticket-header .close-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px 16px;
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 24px;
+}
+
+
+.buy-ticket-header .close-btn:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+.buy-ticket-header .buy-ticket-title {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 4px;
+    width: 100%;
+    margin: 10px 0;
+} 
+ 
+.buy-ticket-content {
+    background-color: #fff;
+    padding: 0 16px;
+}
+
+.buy-ticket-info p{
+    width: 100%;
+    padding: 15px 0;
+}
+.buy-ticket-info p i{
+    margin-right: 5px;
+}
+
+.buy-ticket-info input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.pay-ticket .pay-btn {
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+    margin: 16px 0;
+    background-color: #009688;
+    color: #fff;
+    border: none;
+}
+
+.pay-ticket .pay-btn:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
 }
 
 /* Contact form */

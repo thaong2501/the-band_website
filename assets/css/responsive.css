@@ -50,6 +50,10 @@
         margin-top: 16px;
     }
 
+    #header .search-txt input{
+        width: 150px;
+    }
+
 }
 
 /* Mobile */
@@ -72,7 +76,7 @@
         display: block;
     }
 
-    #header .search-btn{
+    #header .search-bar{
         display: none;
     }
 
