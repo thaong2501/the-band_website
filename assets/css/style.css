@@ -92,6 +92,8 @@ html{
 
 }
 
+/* Header */
+
 #header {
     position: fixed;
     z-index: 1;
@@ -102,11 +104,13 @@ html{
     background-color: #000;
 }
 
+    /* Navigation */
+
 #nav{
     display: inline-block;
 }
 
-#nav, .subnav {
+#nav .subnav {
     list-style-type: none;
 }
 
@@ -128,7 +132,7 @@ html{
     text-decoration: none;
     line-height: 46px;
     padding: 0 24px;
-    display: block;
+    display: inline-block;
     
 }
 
@@ -144,7 +148,6 @@ html{
 
 #nav .subnav {
     display: none;
-    min-width: 160px;
     top: 100%;
     position: absolute;
     background-color: #fff;
@@ -152,6 +155,7 @@ html{
 }
 
 #nav .subnav a {
+    min-width: 160px;
     color: #000;
     padding: 0 12px;
     line-height: 38px;
@@ -161,26 +165,22 @@ html{
     font-size: 12px;
 }
 
-
-#header .mobile-menu-btn {
-    float: right;
-    padding: 0 21px;
-}
+    /* Search bar */
 
 #header .search-bar {
     float: right;
     height: 46px;
 }
 
-#header .search-btn {
-    float: right;
-    padding: 0 21px;
-}
-
 #header .search-txt{
     float: left;
     line-height: 46px;
     
+}
+
+#header .search-txt input:focus {
+    background-color: #ccc;
+    color: #000;
 }
 
 #header .search-txt input {
@@ -193,10 +193,19 @@ html{
     border: 1px solid #fff;
 }
 
+#header .search-btn {
+    float: right;
+    padding: 0 21px;
+}
 
 #header .search-btn:hover {
     cursor: pointer;
     background-color: #f44336;
+}
+
+#header .mobile-menu-btn {
+    float: right;
+    padding: 0 21px;
 }
 
 #header .mobile-menu-btn{
@@ -221,15 +230,22 @@ html{
     line-height: 46px;
 }
 
-#slider {
-    position: relative;
+/* Content */
+
+#content {
     margin-top: 46px;
-    padding-top: 50%;
-    background: url('../img/slider1.jpg') top center / cover  no-repeat;
+
 }
 
+    /* Slider */
 
-#slider .slide-content {
+.slider {
+    position: relative; 
+    /* padding-top: 50%;
+    background: url('../img/slider1.jpg') top center / cover  no-repeat; */
+}
+
+.slider .slide-content {
     position:absolute;
     bottom: 47px;
     color: #fff;
@@ -238,21 +254,17 @@ html{
     text-shadow: 0 0 1px #000;
 }
 
-#slider .slide-heading {
+.slider .slide-heading {
     font-weight: 300;
     font-size: 24px;
 }
 
-#slider .slide-description {
+.slider .slide-description {
     font-size: 15px;
     margin-top: 25px;
 }
-
-
-#content {
-
-}
-
+    
+    
 #content .content-section {
     width: 800px;
     max-width: 100%;
@@ -302,7 +314,7 @@ html{
     border-radius: 4px;
 }
 
-/* Tour section */
+    /* Tour section */
 .tour-section{
     background-color: #000;
 }
@@ -339,7 +351,7 @@ html{
     margin-top: -3px;
 }
 
-/* Places */
+    /* Places */
 .places-list {
     margin-top: 16px;
 }
@@ -374,11 +386,12 @@ html{
     line-height: 1.4;
 }
 
-/* Buy ticket*/
+    /* Buy ticket*/
+
 .container-buy-ticket {
     z-index: 3;
     display: none;
-    padding-top: 100px;
+    padding-top: 150px;
     position: fixed;
     left: 0;
     top: 0;
@@ -451,7 +464,8 @@ html{
     width: 100%;
     text-align: center;
     padding: 16px;
-    margin: 16px 0;
+    margin-top: 16px;
+    margin-bottom: 32px;
     background-color: #009688;
     color: #fff;
     border: none;
@@ -463,7 +477,7 @@ html{
     cursor: pointer;
 }
 
-/* Contact form */
+    /* Contact form */
 
 .contact-content{
     margin-top: 48px;
@@ -502,9 +516,12 @@ html{
     float: right;
 }
 
+    /* Map section */
 .map-section img{
     width: 100%;
 }
+
+/* Footer */
 
 #footer {
     padding: 64px 16px;

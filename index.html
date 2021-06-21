@@ -14,7 +14,7 @@
     <div id="main">
         <!-- Begin: Header -->
         <div id="header">
-            <!-- Begin: Navigation -->
+            <!-- Navigation -->
             <ul id="nav">
                 <li><a href="#">Home</a></li>
                 <li><a href="#band">Band</a></li>
@@ -32,7 +32,6 @@
                     </ul>
                 </li>
             </ul>
-            <!-- End: Navigation -->
 
             <!-- Mobile menu button -->
             <div class="mobile-menu-btn">
@@ -53,31 +52,38 @@
         </div>
         <!-- End: Header -->
 
-        <!-- Begin: Slider -->
-        <div id="slider">
-            <div class="slide-content">
-                <!-- <img src="./assets/img/slider1.jpg" style="width: 100%" alt="" class="slide-img"> -->
-                <h2 class="slide-heading">Los Angeles</h2>
-                <div class="slide-description">We had the best time playing at Venice Beach!</div>
-            </div>
-            <!-- <div class="slide-content">
-                <p class="slide-img" style="background: url('../img/slider2.jpg') top center / cover  no-repeat;"></p>
-                <h2 class="slide-heading">New York</h2>
-                <div class="slide-description">The atmosphere in New York is lorem ipsum.</div>
-            </div>
-            <div class="slide-content">
-                <p class="slide-img" style="background: url('../img/slider3.jpg') top center / cover  no-repeat;"></p>
-                <h2 class="slide-heading">Chicago</h2>
-                <div class="slide-description">Thank you, Chicago - A night we won't forget.</div>
-            </div> -->
-            
-
-        </div>
-        <!-- End: Slider -->
-
         <!-- Begin: Content -->
         <div id="content">
-            <!-- Begin: About section -->
+
+            <!-- Slider -->
+            
+            <div class="slider">
+                <img src="./assets/img/slider1.jpg" style="width: 100%" alt="">
+                <div class="slide-content">
+                    <h2 class="slide-heading">Los Angeles</h2>
+                    <div class="slide-description">We had the best time playing at Venice Beach!</div>
+                </div>
+            </div>
+            <div class="slider">
+                <img src="./assets/img/slider2.jpg" style="width: 100%" alt="">
+                <div class="slide-content">
+                    <h2 class="slide-heading">New York</h2>
+                    <div class="slide-description">The atmosphere in New York is lorem ipsum.</div>
+                </div>
+            </div>
+            <div class="slider">
+                <img src="./assets/img/slider3.jpg" style="width: 100%" alt="">
+                <div class="slide-content">
+                    <h2 class="slide-heading">Chicago</h2>
+                    <div class="slide-description">Thank you, Chicago - A night we won't forget.</div>
+                </div>
+            </div>
+               
+            
+
+            <!-- About section -->
+                
+            
             <div id="band" class="content-section">
                 <h2 class="section-heading">THE BAND</h2>
                 <p class="section-sub-heading">We love music</p>
@@ -97,13 +103,13 @@
                     </div>
                 </div>
             </div>
-            <!-- End: About section -->
 
-            <!-- Begin: Tour section -->
+            <!-- Tour section -->
             <div id="tour" class="tour-section">
                 <div class="content-section">
                     <h2 class="section-heading text-white">TOUR DATES</h2>
-                    <p class="section-sub-heading text-white">Remember to book your tickets!</p>
+                    <p class="section-sub-heading text-white">Remember to book your tickets!</p> -->
+                    
                     <!-- Ticket -->
                     <ul class="ticket-list">
                         <li>September<span class="sold-out">Sold out</span></li>
@@ -142,12 +148,9 @@
                                 <button class="buy-btn btn s-full-width">Buy Tickets</button>
                             </div>
                         </div>
-                    </div>
-
-                    
+                    </div> 
                 </div>
             </div>
-            <!-- End: Tour section -->
 
             <!-- Buy ticket -->
             <div class="container-buy-ticket">
@@ -175,7 +178,7 @@
             </div>
             
 
-            <!-- Begin: Contact section -->
+            <!-- Contact section -->
             <div id="contact" class="content-section">
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-sub-heading">Fan? Drop a note!</p>
@@ -207,7 +210,6 @@
                     </div>
                 </div>
             </div>
-            <!-- End: Contact section -->
 
             <div class="map-section">
                 <img src="/assets/img/map.jpg" alt="map">
@@ -230,6 +232,7 @@
         </div>
         <!-- End: Footer -->
 
+
         <script>
             var header = document.getElementById('header');
             var mobileMenu = document.querySelector('.mobile-menu-btn');
@@ -246,15 +249,6 @@
                 }
             }
             
-            // Click outside to close menu
-            // window.addEventListener('click', function(e) {
-            //     var nav = document.querySelector('#nav');
-            //     if (e.target != mobileMenu) {
-            //         console.log(e.target)
-            //         header.style.height = null; // close
-            //     }
-            // });
-
             // Close when clicking on sub menu
             var menuItems =document.querySelectorAll('#nav li a[href*="#"]');
             for (var i=0; i<menuItems.length; i++){
@@ -271,24 +265,27 @@
             }
 
             // Silde show
-            // var sildeIndex = 0;
-            // showSlides();
-            
-            // function showSlides(){
-            //     var i;
-            //     var slides = document.getElementsByClassName('slide-content')
-            //     for (i = 0; i < slides.length; i++){
-            //         slides[i].style.display = 'none';
-            //     }
-            //     sildeIndex++;
-            //     if(sildeIndex > slides.length){
-            //         sildeIndex = 1;
-            //     }
-            //     slides[slides.length - 1].style.display = "block";
-            //     setTimeout(showSlides, 2000);
-            // }
+            var slides = document.querySelectorAll('.slider');
+            var index = 0;
+            slideShow();
 
-            //Buy ticket
+            function slideShow(){
+                for(var i = 0; i < slides.length; i++){
+                    slides[i].style.display = 'none';
+                }
+
+                index++;
+
+                if(index > slides.length){
+                    index = 1;
+                }
+
+                slides[index - 1].style.display = 'block';
+
+                setTimeout(slideShow, 3000);
+            }
+
+            //Show buy ticket form
             var buyBtn = document.querySelectorAll('.buy-btn');
             var buyForm = document.querySelector('.container-buy-ticket');
             var closeBtn = document.querySelector('.close-btn');
@@ -302,6 +299,13 @@
             closeBtn.onclick = function () {
                 buyForm.style.display = 'none';
             }
+
+            // var modal = document.querySelector('.container-buy-ticket');
+            // window.onclick = function(event) {
+            //     if (event.target == modal) {
+            //         modal.style.display = "none";
+            //     }
+            // }
 
         </script>
     </div>
